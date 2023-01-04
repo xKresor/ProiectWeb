@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Modern Webpage</title>
+  <style>
+body {
+  font-family: Arial, sans-serif;
+  background-image: url('image.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: #fff;
+}
+
+    .button-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 5vh;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+    }
+
+    .button {
+      border: none;
+      background-color: #333;
+      color: #fff;
+      padding: 15px 30px;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 4px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+      transition: all 0.2s ease-in-out;
+      margin: 0 10px;
+    }
+
+    .button:hover {
+      background-color: #ff0000;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      transform: translateY(-2px);
+    }
+  </style>
+</head>
+<body>
+  <div class="button-container">
+    <a class="button" href="about-us.html">About Us</a>
+    <a class="button" href="store.html">Store</a>
+    <a class="button" href="login.php">Login</a>
+    <a class="button" href="register.php">Register</a>
+  </div>
+  <div class="line"></div>
+  <div class="line"></div>
+</body>
+</html>
