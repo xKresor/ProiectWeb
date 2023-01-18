@@ -1,0 +1,158 @@
+<html>
+<head>
+  <title>About Us</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #333;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.5em 1em;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 1.5em;
+    }
+    header a {
+      color: white;
+      text-decoration: none;
+    }
+    .container {
+      max-width: 800px;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 1em;
+    }
+    .slideshow {
+      width: 800px;
+      height: 400px;
+      position: relative;
+    }
+    .slideshow img {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      object-fit: cover;
+      opacity: 0;
+      transition: opacity 0.5s;
+    }
+    .slideshow img.active {
+      opacity: 1;
+    }
+    .slideshow .caption {
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      font-size: 1em;
+      padding: 0.5em;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+    }
+    .section {
+      margin: 2em 0;
+    }
+    .section h2 {
+      font-size: 1.5em;
+      text-align: center;
+      margin: 0.5em 0;
+    }
+    .section p {
+      font-size: 1em;
+      line-height: 1.5;
+      text-align: justify;
+    }
+    footer {
+      background-color: #333;
+      color: white;
+      font-size: 0.9em;
+      text-align: center;
+      padding: 1em 0;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>XYZ SRL</h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+  <div class="container">
+    <div class="slideshow">
+      <img src="image1.jpg" alt="Image 1" class="active">
+      <img src="image2.jpg" alt="Image 2">
+      <img src="image3.jpg" alt="Image 3">
+      <div class="caption">Image 1</div>
+  </div>
+    <div class="section">
+      <h2>Who We Are</h2>
+      <p>Firma XYZ este o companie de top din industria tehnologiei, cu sediul central in orasul Rotterdam. Ei ofera o gama larga de produse si servicii inovatoare, precum si solutii personalizate pentru clientii lor din intreaga lume. Cu o echipa de experti dedicati si un angajament puternic pentru cercetare si dezvoltare, firma XYZ se concentreaza pe livrarea de solutii de calitate si eficiente pentru a ajuta la imbunatatirea afacerilor clientilor lor.</p>
+    </div>
+    <div class="section">
+      <h2>Our Mission</h2>
+      <p>Misiunea noastra este de a oferi solutii tehnologice inovatoare si personalizate pentru a ajuta clientii nostri sa-si maximizeze potentialul afacerilor lor. Ne angajam sa fim lideri in industrie prin cercetare si dezvoltare continua si prin angajamentul fata de excelenta in serviciile si produsele noastre. Ne straduim sa construim si sa mentinem relatii de lunga durata cu clientii nostri prin transparenta, integritate si angajamentul nostru puternic pentru calitate si satisfactia clientului.</p>
+    </div>
+    <div class="section">
+      <h2>Our Team</h2>
+      <p>Echipa noastra este compusa din experti dedicati si pasionati, care lucreaza impreuna pentru a oferi solutii tehnologice de inalta calitate si servicii personalizate pentru clientii nostri. Prin colaborare si comunicare deschisa, ne asiguram ca intelegem nevoile si obiectivele clientilor nostri, si ne straduim sa depasim asteptarile lor prin munca noastra inovatoare si dedicata. Suntem mandri sa avem o echipa diversa si talentata, care se bazeaza pe valorile noastre de integritate, excelenta si angajamentul fata de clienti.</p>
+    </div>
+  </div>
+  <footer>
+    Copyright &copy; 2021 Company Name. All rights reserved.
+  </footer>
+  <script>
+    // Add a JavaScript code to create the slideshow effect
+    const slides = document.querySelectorAll('.slideshow img');
+    const caption = document.querySelector('.slideshow .caption');
+    let currentSlide = 0;
+    let slideInterval = setInterval(nextSlide, 2000);
+    let isPaused = false;
+
+    function nextSlide() {
+      if (isPaused) return;
+      slides[currentSlide].classList.remove('active');
+      currentSlide = (currentSlide + 1) % slides.length;
+      slides[currentSlide].classList.add('active');
+      caption.innerHTML = slides[currentSlide].alt;
+    }
+
+    // Add event listeners for touch events and keyboard events
+    const slideshow = document.querySelector('.slideshow');
+slideshow.addEventListener('touchend', handleTouch);
+    document.addEventListener('keydown', handleKey);
+
+    function handleTouch(event) {
+      if (event.type === 'touchstart') {
+        isPaused = true;
+      } else if (event.type === 'touchend') {
+        isPaused = false;
+        nextSlide();
+      }
+    }
+
+    function handleKey(event) {
+      if (event.key === 'ArrowLeft') {
+        slides[currentSlide].classList.remove('active');
+        currentSlide = (currentSlide + slides.length - 1) % slides.length;
+        slides[currentSlide].classList.add('active');
+        caption.innerHTML = slides[currentSlide].alt;
+      } else if (event.key === 'ArrowRight') {
+        nextSlide();
+      }
+    }
+  </script>
+</body>
+</html>
