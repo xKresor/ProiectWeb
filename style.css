@@ -1,18 +1,70 @@
 body {
-  font-family: 'Roboto', sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #000;
-  color: #fff;
+  background-color: #FFFFFF;
+}
+.navbar {
+    width: 100%;
+    display: flex;
+    justify-content: center; /* center the elements horizontally */
+    align-items: center; /* center the elements vertically */
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+}
+.navbar a{
+    margin-right: 20px;
+    color: #fff;
+    text-decoration: none;
+    /* Use the new btn-box class */
+    class: btn-box;
 }
 
-header {
-  background-color: #333;
-  color: #fff;
-  padding: 20px;
-  text-align: center;
+.btn {
+    font-size: 18px; /* update the font size */
+    padding: 12px 20px; /* add padding */
+    border-radius: 4px; /* add rounded corners */
+    text-decoration: none; /* remove underline */
+    margin-right: 20px; /* add margin between buttons */
+    transition: background-color 0.3s ease; /* add transition for hover effect */
+font-weight: bold;
+
+}
+.btn-box {
+    background-color: #00b8d4; /* update the background color */
+    padding: 8px 15px; /* add padding */
+    border-radius: 4px; /* add rounded corners */
+    text-decoration: none; /* remove underline */
+    margin-right: 20px; /* add margin between buttons */
+    font-weight: bold; /* make the text bold */
 }
 
-h1 {
-  margin: 0;
-  font-size: 32px;
+.btn:hover {
+    background-color: #ffa500; /* change color on hover */
+}
+
+.btn:active {
+    background-color: #ff5733; /* change color on active */
+}
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.product-card {
+    width: 25%; /* adjust the width as needed */
+    padding: 10px;
+    margin: 10px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+img.product-img {
+  width: 200px;
+  height: 200px;
+}
