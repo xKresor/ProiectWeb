@@ -1,0 +1,98 @@
+body {
+font-family: Arial, sans-serif;
+margin: 0;
+padding: 0;
+background-color: #F0F8FF;
+}
+
+.container {
+max-width: 600px;
+margin: 0 auto;
+padding: 30px;
+text-align: center;
+}
+
+h1 {
+font-size: 36px;
+margin-bottom: 20px;
+text-transform: uppercase;
+}
+
+label {
+display: block;
+font-size: 18px;
+margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+display: block;
+width: 100%;
+padding: 12px 20px;
+margin-bottom: 20px;
+font-size: 16px;
+border: 1px solid #ccc;
+box-sizing: border-box;
+border-radius: 5px;
+}
+
+input[type="submit"] {
+background-color: #4CAF50;
+color: white;
+padding: 12px 20px;
+border: none;
+font-size: 18px;
+cursor: pointer;
+border-radius: 5px;
+}
+
+input[type="submit"]:hover {
+background-color: #45a049;
+}
+
+.contact-btns {
+margin-top: 20px;
+text-align: center;
+}
+
+.contact-btns a {
+display: inline-block;
+margin: 0 10px;
+text-decoration: none;
+color: #333;
+font-size: 18px;
+}
+
+.contact-btns a i {
+margin-right: 5px;
+}
+
+.contact-btns a:hover {
+color: #4CAF50;
+}
+
+
+.navbar {
+background-color: #4CAF50;
+}
+
+.navbar-brand {
+font-size: 24px;
+font-weight: bold;
+color: white;
+}
+
+.nav-link {
+color: white;
+font-size: 18px;
+margin-right: 20px;
+}
+
+.nav-link:hover {
+color: #45a049;
+}
+
+.navbar-toggler {
+border-color: white;
+}
