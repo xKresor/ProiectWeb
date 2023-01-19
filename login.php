@@ -144,7 +144,7 @@ input[type="submit"]:hover {
 
   setTimeout(function() {
     // Redirect the user to the store page
-    window.location.href = "store.html";
+    window.location.href = "store.php";
   }, countdown *1000);
 </script>
 <?php endif; ?>
