@@ -18,7 +18,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = $_POST["username"];
     $password = $_POST["password"];
     $email = $_POST["email"];
-    $error = "";  // Initialize error message to an empty string
+    $error = "";  
 
     // Validate input
     if (strlen($username) < 6 || strlen($username) > 32) {
@@ -94,7 +94,7 @@ input[type="submit"]:hover {
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
   transform: translateY(-2px);
 }
-/* Add new styles for the navigation buttons */
+
 .nav-btn {
   background-color: #00b8d4;
   color: #fff;
@@ -105,12 +105,12 @@ input[type="submit"]:hover {
   cursor: pointer;
   box-shadow: 0 2px 4px rgba(0,0,0,0.2);
   transition: all 0.2s ease-in-out;
-  display:inline-block; /* display the button inline */
+  display:inline-block; 
 }
 .nav-btn:hover {
-  background-color: #ff0000; /* change the color of the button when hovered over */
+  background-color: #ff0000; 
 }
-/* Add a container to hold the navigation buttons and position it at the top of the page */
+
 #nav-container {
   position: absolute;
 top: 0;
@@ -135,8 +135,8 @@ text-align: center;
     <input type="submit" value="Submit">
     <br>
     <?php
-      if (isset($error) && $error != "") {  // Check if there is an error message
-          echo $error;  // If there is, display it
+      if (isset($error) && $error != "") {  
+          echo $error;  
       }
     ?>
   </form>
