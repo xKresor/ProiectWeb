@@ -34,7 +34,6 @@ $result = $conn->query($sql);
 
 <?php
  if ($result->num_rows > 0) {
-     // Output data in an organized way
      while($row = $result->fetch_assoc()) {
          echo "<div class='product-card'>";
        echo "<img src='Product" . $row["id"] .".jpg' alt='" . $row["name"] . "' class='product-img'>";
